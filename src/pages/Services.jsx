@@ -193,35 +193,147 @@ const Services = () => {
           })}
         </div>
 
-        {/* Category 05: Featured Span Block */}
-        <div className="px-6 lg:px-10 mt-10">
-          <motion.div 
-            {...fadeInUp}
-            className="w-full rounded-[2rem] lg:rounded-[3rem] bg-zinc-900 border border-white/5 p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden relative group"
-          >
-            <img
-              src="/services/complete-business-support.png"
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:scale-105 transition-transform duration-1000 mix-blend-overlay"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+      </section>
+
+      {/* 2.5 DETAILED SERVICES GRID */}
+      <section className="py-20 bg-black relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black z-0" />
+        <div className="container mx-auto px-6 lg:px-10 relative z-10">
+          
+          <div className="flex items-center justify-center gap-4 mb-16">
+            <div className="h-[1px] w-12 bg-primary/50"></div>
+            <h3 className="text-sm uppercase tracking-[0.3em] text-primary font-bold">Business Setup & Licensing</h3>
+            <div className="h-[1px] w-12 bg-primary/50"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             
-            <div className="relative z-10 max-w-3xl">
-              <span className="inline-block px-4 py-1 rounded-full border border-primary text-primary text-xs uppercase tracking-widest mb-6">Complete Package</span>
-              <h3 className="text-4xl lg:text-5xl font-heading text-white mb-6">End-to-End Business Support</h3>
-              <p className="text-gray-400 font-light text-lg leading-relaxed">
-                A holistic consultancy approach covering setup, licensing, visas, taxation, compliance, legal support, and business growth solutions entirely under one roof.
+            {/* Card 1: Mainland */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-zinc-900/60 border border-white/5 rounded-[24px] p-8 flex flex-col items-center text-center hover:bg-zinc-900 hover:border-primary/30 transition-all duration-300 group shadow-lg"
+            >
+              <div className="w-16 h-16 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Building2 className="w-8 h-8 text-primary" />
+              </div>
+              <h4 className="text-lg font-heading text-white mb-4">Dubai Mainland Company Formation</h4>
+              <p className="text-gray-400 text-[13px] font-light leading-relaxed mb-6">
+                Establish your business in Dubai mainland with 100% ownership and full flexibility.
               </p>
-            </div>
-            
-            <div className="relative z-10 shrink-0">
-              <Link to="/contact" className="flex items-center justify-center w-32 h-32 rounded-full bg-white text-black font-heading text-lg hover:bg-primary transition-colors duration-500 hover:scale-105 active:scale-95 shadow-2xl">
-                Start <br/>Now
-              </Link>
-            </div>
-          </motion.div>
+              <div className="mt-auto w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 cursor-pointer">
+                <ArrowRight className="w-4 h-4 text-white group-hover:text-black" />
+              </div>
+            </motion.div>
+
+            {/* Card 2: Free Zone */}
+            <Link to="/services/free-zone-company-formation" className="contents">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-zinc-900/60 border border-white/5 rounded-[24px] p-8 flex flex-col items-center text-center hover:bg-zinc-900 hover:border-primary/30 transition-all duration-300 group shadow-lg cursor-pointer"
+              >
+                <div className="w-16 h-16 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Globe className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="text-lg font-heading text-white mb-4">Free Zone Company Formation</h4>
+                <p className="text-gray-400 text-[13px] font-light leading-relaxed mb-6">
+                  Set up your business in any of UAE's top free zones with complete benefits and incentives.
+                </p>
+                <div className="mt-auto w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                  <ArrowRight className="w-4 h-4 text-white group-hover:text-black" />
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Card 4: Trade License */}
+            <Link to="/services/trade-license-issuance-renewal-amendments" className="contents">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-zinc-900/60 border border-white/5 rounded-[24px] p-8 flex flex-col items-center text-center hover:bg-zinc-900 hover:border-primary/30 transition-all duration-300 group shadow-lg cursor-pointer"
+              >
+                <div className="w-16 h-16 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Briefcase className="w-8 h-8 text-primary" />
+                </div>
+                <h4 className="text-lg font-heading text-white mb-4">Trade License Issuance, Renewal & Amendments</h4>
+                <p className="text-gray-400 text-[13px] font-light leading-relaxed mb-6">
+                  We handle the entire process of license issuance, renewal, and amendments seamlessly.
+                </p>
+                <div className="mt-auto w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                  <ArrowRight className="w-4 h-4 text-white group-hover:text-black" />
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Card 5: New Business Setup */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-zinc-900/60 border border-white/5 rounded-[24px] p-8 flex flex-col items-center text-center hover:bg-zinc-900 hover:border-primary/30 transition-all duration-300 group shadow-lg"
+            >
+              <div className="w-16 h-16 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Building2 className="w-8 h-8 text-primary" />
+              </div>
+              <h4 className="text-lg font-heading text-white mb-4">New Business Setup</h4>
+              <p className="text-gray-400 text-[13px] font-light leading-relaxed mb-6">
+                Complete assistance for launching your new business from scratch in the UAE.
+              </p>
+              <div className="mt-auto w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 cursor-pointer">
+                <ArrowRight className="w-4 h-4 text-white group-hover:text-black" />
+              </div>
+            </motion.div>
+
+            {/* Additional Cards */}
+            {[
+              { title: "Business Bank Account Opening Assistance", desc: "Hassle-free bank account opening support for your business in the UAE.", icon: Landmark },
+              { title: "PRO & Document Clearing Services", desc: "End-to-end PRO services for all your documentation and government approvals.", icon: Briefcase },
+              { title: "UAE Visit Visa", desc: "Quick and efficient processing for UAE visit visas.", icon: Globe },
+              { title: "Saudi Arabia Multiple-Entry Visa", desc: "Secure multiple-entry visas for business travel to Saudi Arabia.", icon: Globe },
+              { title: "Investor Visa", desc: "Long-term residency solutions for business investors in the UAE.", icon: Zap },
+              { title: "Partner Visa", desc: "Visa processing and sponsorship for business partners.", icon: Users },
+              { title: "Employment Visa", desc: "Streamlined employment visa processing for your company staff.", icon: Briefcase },
+              { title: "Family Visa Sponsorship", desc: "Hassle-free family sponsorship and dependent visa services.", icon: Users },
+              { title: "Emirates ID Services", desc: "Complete assistance with Emirates ID application and renewal.", icon: CreditCard },
+              { title: "Immigration & Visa Processing", desc: "Comprehensive immigration support and visa status management.", icon: Globe },
+              { title: "AML Registration & Compliance", desc: "Ensure your business meets all Anti-Money Laundering regulations.", icon: Shield },
+              { title: "MOA & Legal Documentation", desc: "Drafting and processing of Memorandum of Association and legal documents.", icon: Scale },
+              { title: "Pakistani Passport Renewal & Lost Passport Assistance", desc: "Dedicated support for passport renewal and replacement services.", icon: Globe },
+              { title: "Government & Corporate Services", desc: "Liaison with all government departments for corporate requirements.", icon: Building2 }
+            ].map((service, idx) => {
+              const Icon = service.icon;
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * (idx % 5) }}
+                  className="bg-zinc-900/60 border border-white/5 rounded-[24px] p-8 flex flex-col items-center text-center hover:bg-zinc-900 hover:border-primary/30 transition-all duration-300 group shadow-lg"
+                >
+                  <div className="w-16 h-16 rounded-full border border-primary/30 bg-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-heading text-white mb-4">{service.title}</h4>
+                  <p className="text-gray-400 text-[13px] font-light leading-relaxed mb-6">
+                    {service.desc}
+                  </p>
+                  <div className="mt-auto w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors duration-300 cursor-pointer">
+                    <ArrowRight className="w-4 h-4 text-white group-hover:text-black" />
+                  </div>
+                </motion.div>
+              );
+            })}
+
+          </div>
         </div>
       </section>
 
